@@ -86,10 +86,10 @@ export POW_TIMEOUT=3600
 # Paths
 #
 # Colors and completion
+export PATH=$PATH:~/bin
 export PATH="~/.bin:$PATH"
 export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH
 # export PATH=$HOME/.rbenv/shims:/usr/local/bin:$PATH
-export PATH=$PATH:~/bin
 
 # NPM
 # export PATH=$PATH:/usr/local/share/npm/bin

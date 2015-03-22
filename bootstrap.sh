@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+fancy_echo() {
+  local fmt="$1"; shift
+  printf "\xF0\x9F\x90\x9D  $fmt\n" "$@"
+}
 
 cd "$(dirname "${BASH_SOURCE}")";
 
