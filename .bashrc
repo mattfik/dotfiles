@@ -2,6 +2,7 @@
 # Bash
 #
 . ~/.bin/bash-colors.sh
+
 alias ls='ls -laG'
 alias ttop="top -R -F -s 10 -o rsize"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
@@ -89,7 +90,6 @@ export POW_TIMEOUT=3600
 export PATH=$PATH:~/bin
 export PATH="~/.bin:$PATH"
 export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH
-# export PATH=$HOME/.rbenv/shims:/usr/local/bin:$PATH
 
 # NPM
 # export PATH=$PATH:/usr/local/share/npm/bin

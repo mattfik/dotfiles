@@ -2,6 +2,11 @@
 
 ## Installation
 
+```bash
+mkdir ~/dotfiles && cd $_
+git clone https://github.com/ivanreese/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
+
 ## Thanks to…
 
 * @ptb and [his _OS X Lion Setup_ repository](https://github.com/ptb/Mac-OS-X-Lion-Setup)
@@ -18,3 +23,4 @@
 * [Kevin Suttle](http://kevinsuttle.com/) and his [dotfiles repository](https://github.com/kevinSuttle/dotfiles) and [OSXDefaults project](https://github.com/kevinSuttle/OSXDefaults), which aims to provide better documentation for [`~/.osx`](https://mths.be/osx)
 * [Haralan Dobrev](http://hkdobrev.com/)
 * anyone who [contributed a patch](https://github.com/mathiasbynens/dotfiles/contributors) or [made a helpful suggestion](https://github.com/mathiasbynens/dotfiles/issues)
+* [Ivan Reese](https://github.com/ivanreese) for the [dotfiles](https://github.com/ivanreese/dotfiles) and associated [scripts](https://github.com/ivanreese/up-and-punning)

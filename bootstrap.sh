@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 fancy_echo() {
   local fmt="$1"; shift
-  printf "\xF0\x9F\x90\x9D  $fmt\n" "$@"
+  printf "$fmt\n" "$@"
 }
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-fancy_echo "Pulling latest changes..."
+fancy_echo "Pulling latest dotfiles changes..."
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "README.md" -avh --no-perms . ~;
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 
