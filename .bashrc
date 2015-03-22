@@ -32,6 +32,7 @@ source ~/.bin/git-completion.bash
 co() {
   git checkout $1
 }
+
 # these could live in .gitconfig
 alias st="git s"
 alias gpom="git pull origin master"
@@ -64,7 +65,7 @@ build_git_prompt() {
     echo ${GIT_PROMPT}
   fi
 }
-export PS1="\h:\u █ \W\$(build_git_prompt)\$ "
+export PS1="\h:\u \[█\] \W\$(build_git_prompt)\$ "
 
 #
 # Rails
@@ -86,7 +87,6 @@ export POW_TIMEOUT=3600
 #
 # Paths
 #
-# Colors and completion
 export PATH=$PATH:~/bin
 export PATH="~/.bin:$PATH"
 export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH
