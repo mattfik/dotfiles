@@ -33,7 +33,7 @@ co() {
   git checkout $1
 }
 # these could live in .gitconfig
-alias st="git status"
+alias st="git s"
 alias gpom="git pull origin master"
 alias glog="git log --pretty=oneline --abbrev-commit --graph --decorate --all"
 alias subpull="git submodule foreach git pull origin master"
@@ -64,7 +64,7 @@ build_git_prompt() {
     echo ${GIT_PROMPT}
   fi
 }
-export PS1="\h █ \W\$(build_git_prompt) \u\$ "
+export PS1="\h:\u █ \W\$(build_git_prompt)\$ "
 
 #
 # Rails
