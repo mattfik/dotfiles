@@ -2,6 +2,7 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
+fancy_echo "Pulling latest changes..."
 git pull origin master;
 
 function doIt() {
