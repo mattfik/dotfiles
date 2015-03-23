@@ -1,8 +1,6 @@
 #
 # Bash
 #
-. ~/.bin/bash-colors.sh
-
 alias ls='ls -laG'
 alias ttop="top -R -F -s 10 -o rsize"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
@@ -27,6 +25,8 @@ shopt -s cdspell
 #
 # Git
 #
+GIT_PROMPT_ONLY_IN_REPO=1
+source ~/.bin/gitprompt.sh
 source ~/.bin/git-completion.bash
 
 co() {
@@ -38,34 +38,6 @@ alias st="git s"
 alias gpom="git pull origin master"
 alias glog="git log --pretty=oneline --abbrev-commit --graph --decorate --all"
 alias subpull="git submodule foreach git pull origin master"
-
-function minutes_since_last_commit {
-  now=`date +%s`
-  last_commit=`git log --pretty=format:'%at' -1`
-  seconds_since_last_commit=$((now-last_commit))
-  minutes_since_last_commit=$((seconds_since_last_commit/60))
-  echo $minutes_since_last_commit
-}
-build_git_prompt() {
-  local g="$(__gitdir)"
-  if [ -n "$g" ]; then
-    local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
-    if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 1440 ]; then
-      local COLOR=${RED}
-    elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 60 ]; then
-      local COLOR=${YELLOW}
-    else
-      local COLOR=${GREEN}
-    fi
-    local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${NORMAL}"
-
-    local BRANCH="${COLOR}%s${NORMAL}"
-    # The __git_ps1 function inserts the current git branch where %s is
-    local GIT_PROMPT=`__git_ps1 "[${BRANCH}](${SINCE_LAST_COMMIT})"`
-    echo ${GIT_PROMPT}
-  fi
-}
-export PS1="\h:\u \[█\] \W\$(build_git_prompt)\$ "
 
 #
 # Rails
@@ -107,6 +79,3 @@ ulimit -n 10000
 
 # Use Sublime as default editor
 export EDITOR="subl -w"
-
-# Original prompt:
-# export PS1="\h:\W \u\$"

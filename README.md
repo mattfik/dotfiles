@@ -19,3 +19,4 @@ source bootstrap.sh
 * [Mathias](https://github.com/mathiasbynens/dotfiles) for the dotfiles
 * [Gary Bernhardt](https://github.com/garybernhardt/dotfiles) for the dotfiles
 * [Ivan Reese](https://github.com/ivanreese) for the [dotfiles](https://github.com/ivanreese/dotfiles) and associated [scripts](https://github.com/ivanreese/up-and-punning)
+* [Martin Gondermann](https://github.com/magicmonty/bash-git-prompt) for the git prompt
