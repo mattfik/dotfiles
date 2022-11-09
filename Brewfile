@@ -1,4 +1,4 @@
-brew --cask alfred
+brew --cask raycast
 brew --cask visual-studio-code
 brew --cask docker
 brew --cask gitify
