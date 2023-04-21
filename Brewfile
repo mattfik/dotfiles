@@ -4,6 +4,7 @@ brew --cask docker
 brew --cask gitify
 brew --cask vlc
 brew rbenv
+brew act
 brew wifi-password
 brew nvm
 brew watchman
