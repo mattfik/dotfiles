@@ -3,18 +3,20 @@ brew --cask visual-studio-code
 brew --cask docker
 brew --cask gitify
 brew --cask vlc
-brew rbenv
 brew act
-brew wifi-password
-brew nvm
-brew watchman
-brew gh
-brew koekeishiya/formulae/skhd
-brew jq
-brew yarn
-brew fzf
 brew awscli
 brew awslogs
-brew redis
-brew nmap
+brew fzf
+brew gh
+brew go
+brew gum
+brew jq
+brew koekeishiya/formulae/skhd
 brew lhashicorp/tap/terraform
+brew nmap
+brew nvm
+brew rbenv
+brew redis
+brew watchman
+brew wifi-password
+brew yarn
