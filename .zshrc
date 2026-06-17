@@ -26,10 +26,6 @@ prompt pure
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export EDITOR="code -w"
 
-# Private Variables
-export NPM_TOKEN=7418444987d3efc5f8af64edea926f26769b981c
-export GITHUB_NPM_TOKEN=1c01e767fe5b8cf4b598cde0209bd1f978f03d7e
-
 # Aliases
 alias go="git open"
 alias gpv="gh pr view"
